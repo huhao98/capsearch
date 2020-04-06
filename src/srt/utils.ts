@@ -42,7 +42,5 @@ export function toCaption (part: string): Caption | undefined {
       duration: end - start,
       content: content,
     } as Caption
-  } else {
-    console.log("WARN: Unknown part", part);
   }
 }
