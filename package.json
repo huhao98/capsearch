@@ -1,0 +1,38 @@
+{
+  "name": "capsearch",
+  "version": "0.1.0",
+  "description": "Tools for indexing",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "run": "node ./cli.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "tslint src/**/*.ts",
+    "prepublish": "yarn build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "algoliasearch": "^4.1.0",
+    "iconv-lite": "^0.5.1",
+    "yargs": "^15.3.1"
+  },
+  "bin": {
+		"capsearch": "cli.js"
+	},
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "jest": "^25.2.7",
+    "nodemon": "^2.0.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  }
+}
